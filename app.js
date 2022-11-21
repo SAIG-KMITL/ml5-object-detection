@@ -22,7 +22,8 @@ function preload() {
 // The setup() function is called once when the program starts.
 function setup() {
   // create canvas element with 640 width and 480 height in pixel
-  createCanvas(320*2, 240*2);
+  var mycanvas = createCanvas(320*2, 240*2);
+  mycanvas.parent("vdodiv");
   // Creates a new HTML5 <video> element that contains the audio/video feed from a webcam.
   // The element is separate from the canvas and is displayed by default.
   video = createCapture(VIDEO);
