@@ -7,15 +7,47 @@
   <script src="https://unpkg.com/ml5@0.7.1/dist/ml5.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8" />
+  <style>
+    body, div.container{
+      text-align:center;
+    }
+
+    div.container{
+      width:700px;
+      margin:auto;
+    }
+
+    div.text_left{
+      text-align: left;
+    }
+
+    h1 img{
+      vertical-align: middle;
+      margin-right:20px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container text_left">
+    <h1> <img src="https://avatars.githubusercontent.com/u/55849022" width="100" /> Object Detection Demo </h1>
+    <hr/>
+  </div>
+
+  <div id="vdodiv" class="container">
+  </div>
 <!--  <p>
     <button id="toggleVideoEl" onclick="toggleVideo()">Hide Video</button>
     <button id="toggleDetectingEl" onclick="toggleDetecting()">Start Detecting</button>
   </p>
 -->
   <script src="app.js"></script>
+
+  <div class="container">
+    <hr/>
+    <p>SAIG | KMITL</p>
+    <small><i>modified from: <a target="_blank" src="https://github.com/yong-asial/ml5-object-detection">https://github.com/yong-asial/ml5-object-detection</a></i></small>
+  </div>
 
 </body>
 
