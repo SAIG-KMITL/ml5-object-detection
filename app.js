@@ -2,8 +2,8 @@
 let video = null; // video element
 let detector = null; // detector object
 let detections = []; // store detection result
-let videoVisibility = true;
-let detecting = false;
+let videoVisibility = false; //true;
+let detecting = true; //false;
 
 // global HTML element
 const toggleVideoEl = false; // document.getElementById('toggleVideoEl');
@@ -22,11 +22,11 @@ function preload() {
 // The setup() function is called once when the program starts.
 function setup() {
   // create canvas element with 640 width and 480 height in pixel
-  createCanvas(640, 480);
+  createCanvas(800, 480);
   // Creates a new HTML5 <video> element that contains the audio/video feed from a webcam.
   // The element is separate from the canvas and is displayed by default.
   video = createCapture(VIDEO);
-  video.size(640, 480);
+  video.size(800, 480);
   console.log('video element is created');
   video.elt.addEventListener('loadeddata', function() {
     // set cursor back to default
