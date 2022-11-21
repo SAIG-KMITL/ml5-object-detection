@@ -22,19 +22,24 @@ function preload() {
 // The setup() function is called once when the program starts.
 function setup() {
   // create canvas element with 640 width and 480 height in pixel
-  createCanvas(800, 480);
+  createCanvas(320*2, 240*2);
   // Creates a new HTML5 <video> element that contains the audio/video feed from a webcam.
   // The element is separate from the canvas and is displayed by default.
   video = createCapture(VIDEO);
-  video.size(800, 480);
+  video.size(320*2, 240*2);
+
   console.log('video element is created');
   video.elt.addEventListener('loadeddata', function() {
     // set cursor back to default
     if (video.elt.readyState >= 2) {
       document.body.style.cursor = 'default';
       console.log('video element is ready! Click "Start Detecting" to see the magic!');
+      detect();
     }
   });
+
+  video.hide();
+
 }
 
 // the draw() function continuously executes until the noLoop() function is called
@@ -42,6 +47,7 @@ function draw() {
   if (!video || !detecting) return;
   // draw video frame to canvas and place it at the top-left corner
   image(video, 0, 0);
+
   // draw all detected objects to the canvas
   for (let i = 0; i < detections.length; i++) {
     drawResult(detections[i]);
