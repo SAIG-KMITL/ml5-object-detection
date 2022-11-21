@@ -6,8 +6,8 @@ let videoVisibility = true;
 let detecting = false;
 
 // global HTML element
-const toggleVideoEl = document.getElementById('toggleVideoEl');
-const toggleDetectingEl = document.getElementById('toggleDetectingEl');
+const toggleVideoEl = false; // document.getElementById('toggleVideoEl');
+const toggleDetectingEl = true; // document.getElementById('toggleDetectingEl');
 
 // set cursor to wait until video elment is loaded
 document.body.style.cursor = 'wait';
